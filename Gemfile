@@ -54,3 +54,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # 2017/09/13
 gem 'honoka-rails', '>= 3.3.6.3'
+gem 'haml-rails'
+gem 'erb2haml'
