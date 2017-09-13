@@ -5,6 +5,24 @@
     %title Groo
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    -# = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+    %nav.navbar.navbar-inverse
+      .container-fluid
+        .navbar-header
+          %button.navbar-toggle.collapsed{"aria-expanded" => "false", "data-target" => "#bs-example-navbar-collapse-2", "data-toggle" => "collapse", :type => "button"}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.navbar-brand{:href => "#"} #{t('view.name')}
+        #bs-example-navbar-collapse-2.navbar-collapse.collapse{"aria-expanded" => "false", :style => "height: 1px;"}
+          %ul.nav.navbar-nav
+            %li
+              %a{:href => "#"}
+                Link
+                %span.sr-only (current)
+          %ul.nav.navbar-nav.navbar-right
+            %li
+              %a{:href => "#"} Link
     = yield
